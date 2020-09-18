@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "form-fields": [
+        "dist/form-fields"
+      ],
+      "form-fields/*": [
+        "dist/form-fields/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
