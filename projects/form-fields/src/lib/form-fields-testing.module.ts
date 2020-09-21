@@ -5,19 +5,19 @@ import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { AbstractFormFieldComponent } from './abstract-form-field.component';
 
 @Component({
-  selector: 'app-datepicker',
+  selector: 'sjs-datepicker',
   template: '<div [id]="label"></div>',
 })
 export class DatepickerComponent extends AbstractFormFieldComponent {}
 
 @Component({
-  selector: 'app-input',
+  selector: 'sjs-input',
   template: '<div [id]="label"></div>',
 })
 export class InputComponent extends AbstractFormFieldComponent {}
 
 @Component({
-  selector: 'app-select',
+  selector: 'sjs-select',
   template: '<div [id]="label"></div>',
 })
 export class SelectComponent extends AbstractFormFieldComponent {
@@ -25,7 +25,7 @@ export class SelectComponent extends AbstractFormFieldComponent {
 }
 
 @Component({
-  selector: 'app-submit',
+  selector: 'sjs-submit',
   template: '<div>Submit</div>',
 })
 export class SubmitComponent {
@@ -44,4 +44,4 @@ const components = [
   exports: [ReactiveFormsModule, components],
   imports: [CommonModule, ReactiveFormsModule],
 })
-export class FormFieldTestingModule {}
+export class FormFieldsTestingModule {}

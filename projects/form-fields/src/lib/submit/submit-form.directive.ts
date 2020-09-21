@@ -2,19 +2,19 @@ import { Directive, HostListener, Input } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
 @Directive({
-  selector: '[appSubmitForm]',
+  selector: 'form[formGroup]',
 })
 export class SubmitFormDirective {
-  @Input() appSubmitForm: FormGroup;
+  @Input() formGroup: FormGroup;
 
   @HostListener('click', ['$event'])
   onClick(event: Event): void {
-    for (const control in this.appSubmitForm.controls) {
-      if (this.appSubmitForm.controls.hasOwnProperty(control)) {
-        this.appSubmitForm.controls[control].markAsTouched();
+    for (const control in this.formGroup.controls) {
+      if (this.formGroup.controls.hasOwnProperty(control)) {
+        this.formGroup.controls[control].markAsTouched();
       }
     }
-    if (!this.appSubmitForm.valid) {
+    if (!this.formGroup.valid) {
       event.preventDefault();
     }
   }

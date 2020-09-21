@@ -7,7 +7,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { By } from '@angular/platform-browser';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
-import { SelectComponent } from './select.component';
+import { SelectMaterialComponent } from './select.component';
 
 @Component({
   selector: 'app-host',
@@ -19,12 +19,12 @@ class HostComponent {
 
 describe('SelectComponent', () => {
   let hostComponent: HostComponent;
-  let component: SelectComponent;
+  let component: SelectMaterialComponent;
   let fixture: ComponentFixture<HostComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SelectComponent, HostComponent],
+      declarations: [SelectMaterialComponent, HostComponent],
       imports: [
         NoopAnimationsModule,
         MatFormFieldModule,
@@ -38,8 +38,9 @@ describe('SelectComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(HostComponent);
     hostComponent = fixture.componentInstance;
-    component = fixture.debugElement.query(By.directive(SelectComponent))
-      .componentInstance;
+    component = fixture.debugElement.query(
+      By.directive(SelectMaterialComponent)
+    ).componentInstance;
     fixture.detectChanges();
   });
 

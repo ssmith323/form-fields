@@ -1,12 +1,12 @@
 import { FormControl, Validators } from '@angular/forms';
 
-import { InputComponent } from './input.component';
+import { InputMaterialComponent } from './input.component';
 
 describe('InputComponent', () => {
-  let component: InputComponent;
+  let component: InputMaterialComponent;
 
   beforeEach(() => {
-    component = new InputComponent();
+    component = new InputMaterialComponent();
   });
 
   describe('ngOnInit', () => {

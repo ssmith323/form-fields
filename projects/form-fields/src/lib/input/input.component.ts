@@ -2,12 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 
 import { AbstractFormFieldComponent } from '../abstract-form-field.component';
 
-@Component({
-  selector: 'app-input',
-  templateUrl: './input.component.html',
-})
-export class InputComponent extends AbstractFormFieldComponent
-  implements OnInit {
+class InputComponent extends AbstractFormFieldComponent implements OnInit {
   @Input() type: string;
 
   constructor() {
@@ -18,3 +13,9 @@ export class InputComponent extends AbstractFormFieldComponent
     this.id = this.getId();
   }
 }
+
+@Component({
+  selector: 'sjs-input',
+  templateUrl: './input.material.component.html',
+})
+export class InputMaterialComponent extends InputComponent {}

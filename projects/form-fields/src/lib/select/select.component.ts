@@ -1,13 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 import { AbstractFormFieldComponent } from '../abstract-form-field.component';
+import { BasicOption } from '../basic-option';
 
-@Component({
-  selector: 'app-select',
-  templateUrl: './select.component.html',
-  styleUrls: ['./select.component.scss'],
-})
-export class SelectComponent extends AbstractFormFieldComponent
+abstract class SelectComponent
+  extends AbstractFormFieldComponent
   implements OnInit {
   @Input() options: BasicOption[];
 
@@ -20,7 +17,9 @@ export class SelectComponent extends AbstractFormFieldComponent
   }
 }
 
-export interface BasicOption {
-  label: string;
-  value: string;
-}
+@Component({
+  selector: 'sjs-select',
+  templateUrl: './select.material.component.html',
+  styleUrls: ['./select.component.scss'],
+})
+export class SelectMaterialComponent extends SelectComponent {}

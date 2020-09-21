@@ -7,7 +7,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
-import { DatepickerComponent } from './datepicker.component';
+import { DatepickerMaterialComponent } from './datepicker.component';
 
 @Component({
   selector: 'app-host',
@@ -24,7 +24,7 @@ describe('DatepickerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [DatepickerComponent, HostComponent],
+      declarations: [DatepickerMaterialComponent, HostComponent],
       imports: [
         NoopAnimationsModule,
         MatDatepickerModule,

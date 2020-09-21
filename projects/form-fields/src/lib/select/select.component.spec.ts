@@ -1,12 +1,12 @@
 import { FormControl } from '@angular/forms';
 
-import { SelectComponent } from './select.component';
+import { SelectMaterialComponent } from './select.component';
 
 describe('SelectComponent', () => {
-  let component: SelectComponent;
+  let component: SelectMaterialComponent;
 
   beforeEach(() => {
-    component = new SelectComponent();
+    component = new SelectMaterialComponent();
   });
 
   it('should have a no id override', () => {

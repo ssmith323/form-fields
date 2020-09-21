@@ -7,19 +7,15 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 
-import { CSSFramework } from './css-framework';
-import { DatepickerComponent } from './datepicker/datepicker.component';
-import { InputComponent } from './input/input.component';
-import { SelectComponent } from './select/select.component';
+import { DatepickerMaterialComponent } from './datepicker/datepicker.component';
+import { InputMaterialComponent } from './input/input.component';
+import { SelectMaterialComponent } from './select/select.component';
 import { SubmitFormDirective } from './submit/submit-form.directive';
-import { SubmitComponent } from './submit/submit.component';
 
-export const lib = CSSFramework.MATERIAL;
 const components = [
-  InputComponent,
-  SelectComponent,
-  DatepickerComponent,
-  SubmitComponent,
+  InputMaterialComponent,
+  SelectMaterialComponent,
+  DatepickerMaterialComponent,
 ];
 
 @NgModule({
@@ -35,4 +31,4 @@ const components = [
     MatButtonModule,
   ],
 })
-export class FormFieldsModule {}
+export class FormFieldsMaterialModule {}

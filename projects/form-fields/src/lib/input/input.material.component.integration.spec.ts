@@ -6,7 +6,7 @@ import { MatInputModule } from '@angular/material/input';
 import { By } from '@angular/platform-browser';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
-import { InputComponent } from './input.component';
+import { InputMaterialComponent } from './input.component';
 
 @Component({
   selector: 'app-host',
@@ -18,12 +18,12 @@ class HostComponent {
 
 describe('InputComponent', () => {
   let hostComponent: HostComponent;
-  let component: InputComponent;
+  let component: InputMaterialComponent;
   let fixture: ComponentFixture<HostComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [InputComponent, HostComponent],
+      declarations: [InputMaterialComponent, HostComponent],
       imports: [
         NoopAnimationsModule,
         MatFormFieldModule,
@@ -36,7 +36,7 @@ describe('InputComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(HostComponent);
     hostComponent = fixture.componentInstance;
-    component = fixture.debugElement.query(By.directive(InputComponent))
+    component = fixture.debugElement.query(By.directive(InputMaterialComponent))
       .componentInstance;
     fixture.detectChanges();
   });

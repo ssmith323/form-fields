@@ -1,12 +1,12 @@
 import { FormControl } from '@angular/forms';
 
-import { DatepickerComponent } from './datepicker.component';
+import { DatepickerMaterialComponent } from './datepicker.component';
 
 describe('DatepickerComponent', () => {
-  let component: DatepickerComponent;
+  let component: DatepickerMaterialComponent;
 
   beforeEach(() => {
-    component = new DatepickerComponent();
+    component = new DatepickerMaterialComponent();
   });
 
   it('should have a no id override', () => {

@@ -7,7 +7,7 @@
       "projectType": "library",
       "root": "projects/form-fields",
       "sourceRoot": "projects/form-fields/src",
-      "prefix": "lib",
+      "prefix": "sjs",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
@@ -31,12 +31,11 @@
               "projects/form-fields/tsconfig.lib.json",
               "projects/form-fields/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "form-fields"
 }
